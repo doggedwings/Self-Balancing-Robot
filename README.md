@@ -35,6 +35,6 @@ Chassis & Wheels: Custom 3D printed, Fusion 360 designed — PLA/PETG structure
 
 
 # Roadmap for version 2
-Custom PCB — replacing the breadboard with a 2-layer board carrying the ESP32, both A4988s, the IMU, and multi-rail power regulation. Breadboard contact resistance and floating jumpers are the current biggest source of unexplained behaviour.
-Aesthetics — enclosed printed shell, hidden wiring, proper face panel for the LED eyes.
-IMU upgrade — moving to a BNO055 for onboard sensor fusion instead of filtering raw MPU6050 output in firmware.
+Custom PCB - replacing the breadboard with a 2-layer board carrying the ESP32, both A4988s, the IMU, and multi-rail power regulation. Breadboard contact resistance and floating jumpers are the current biggest source of unexplained behaviour.
+Aesthetics - enclosed printed shell, hidden wiring, proper face panel for the LED eyes.
+IMU upgrade - moving to a BNO055 for onboard sensor fusion instead of filtering raw MPU6050 output in firmware.
