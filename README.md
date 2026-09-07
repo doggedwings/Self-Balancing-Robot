@@ -1,15 +1,14 @@
 # Self-Balancing Robot
 
-A two-wheeled inverted pendulum robot built around a dual-core ESP32, two NEMA 17 stepper motors, an MPU6050 IMU, and a custom 3D printed chassis. 
-It holds itself upright using a cascaded PID controller running at 100 Hz, drives over Bluetooth from an Xbox controller, and has a pair of MAX7219 LED matrix "eyes" so it can look at you while it does it.
+A two wheeled robot that keeps itself upright with a PID controller running on an ESP32. Two NEMA 17 steppers, an MPU6050 for tilt, and a 3D printed chassis. You drive it from a web page over WiFi.
 
 # WATCH IT BALANCE HERE <your video link here>
 
 # Why I Built This
 
-I wanted to build something I could drive around, and a normal RC car felt like the obvious version of that everyone builds. A robot that has to actively keep itself from falling over just to sit still seemed like a much better problem.
+I wanted something I could drive around, and a normal RC car felt like the obvious version of that. A robot that has to actively work to not fall over just sitting still seemed like a better problem.
 
-The other half of it was that I wanted to challenge myself with a PID loop. This one couldn't be cheated, as I had to manually tune it and actually learn how the controls worked, or it just fell over.
+The other half was that I wanted to challenge myself with a PID loop. This one couldn't be cheated. I had to manually tune it and actually learn how the controls worked, or it just fell over.
 
 It still drives like an RC car. It just has to solve a much harder problem to do it.
 
@@ -54,6 +53,11 @@ Motors and logic run on separate breadboard rails, because steppers pull enough 
 
 
 # Roadmap for version 2
-Custom PCB replacing the breadboard with a 2-layer board carrying the ESP32, both A4988S, the IMU, and multi-rail power regulation. Breadboard contact resistance and floating jumpers are the current biggest source of unexplained behaviour.
-Aesthetics - enclosed printed shell, hidden wiring, proper face panel for the LED eyes.
-IMU upgrade - moving to a BNO055 for onboard sensor fusion instead of filtering raw MPU6050 output in firmware.
+
+Custom PCB replacing the breadboard. A 2 layer board carrying the ESP32, both A4988s, the IMU, and separate regulation for each rail. Breadboard contact resistance and jumpers working loose are the biggest source of unexplained behaviour right now.
+
+Xbox controller over Bluetooth instead of the web page, for lower latency and analog stick control.
+
+Aesthetics. Enclosed printed shell, hidden wiring, proper face panel.
+
+IMU upgrade to a BNO055, which does sensor fusion onboard instead of filtering raw MPU6050 output in firmware.
